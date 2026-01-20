@@ -26,7 +26,8 @@ function addToCart(productName, price) {
 function updateCartUI() {
     const cartBtn = document.querySelector('.cart-btn');
     if (cartBtn) {
-        cartBtn.textContent = `🛒 カート (${cartCount})`;
+        cartBtn.textContent = '🛒';
+        cartBtn.setAttribute('aria-label', `カート（${cartCount}件）`);
     }
 }
 
