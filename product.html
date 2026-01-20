@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品詳細 - shecare</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: 1.1fr 1.4fr;
+            gap: 2rem;
+        }
+        .product-gallery {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        .product-main-image {
+            width: 100%;
+            height: 320px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-main-image img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-info-main h1 {
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+        }
+        .product-info-main-sub {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+        .product-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .expert-box {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            box-shadow: var(--shadow);
+            margin-top: 1rem;
+        }
+        .expert-box-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+        .expert-box p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .rating-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+            font-size: 0.85rem;
+        }
+        .rating-pill {
+            padding: 0.1rem 0.5rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+        }
+        .rating-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+        }
+        .section-heading {
+            font-size: 1.1rem;
+            margin: 2rem 0 0.75rem;
+        }
+        .product-detail-text p {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 0.75rem;
+        }
+        .review-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .review-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            box-shadow: var(--shadow);
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.4rem;
+        }
+        .review-age {
+            font-size: 0.8rem;
+            padding: 0.1rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+        }
+        .review-tags {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        @media (max-width: 900px) {
+            .product-page {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-block">
+                    <h1 class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">shecare</a></h1>
+                    <p class="logo-tagline">誰にも言えない悩みを、そっとケアできる場所。</p>
+                </div>
+                <nav class="nav">
+                    <a href="index.html#for-beginner">はじめての方へ</a>
+                    <a href="index.html#concerns">お悩みから探す</a>
+                    <a href="index.html#ranking">ランキング</a>
+                    <a href="index.html#articles">読みもの</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" placeholder="何に悩んでいますか？">
+                    </div>
+                    <button class="cart-btn">🛒 カート (0)</button>
+                    <button class="user-btn">👤 ゲストさん</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div style="margin-bottom:1rem;">
+                <a href="ranking.html#beginner" class="text-link">← ランキング一覧に戻る</a>
+            </div>
+            <section class="product-page">
+                <div class="product-gallery">
+                    <div class="product-main-image product-image-1">
+                        <img src="images/vibe-dummy.png" alt="初心者向けバイブのイメージ">
+                    </div>
+                </div>
+                <div class="product-info-main">
+                    <div class="product-tags">
+                        <span class="tag">初心者向け</span>
+                        <span class="tag">セクシャルウェルネス</span>
+                        <span class="tag">静音</span>
+                    </div>
+                    <h1>やさしい静音バイブ（初めてさん用）</h1>
+                    <p class="product-info-main-sub">
+                        細め・柔らかめ・静音設計で、はじめての方でも使いやすいように設計されたモデルです。
+                    </p>
+                    <div class="product-price">
+                        <span class="price">¥7,480</span>
+                        <span class="original-price">¥8,800</span>
+                    </div>
+                    <div class="product-meta-row">
+                        <span>レビュー ★4.7（126件）</span>
+                        <span>初心者の方のリピート率 62%</span>
+                        <span>年齢確認：18歳以上</span>
+                    </div>
+                    <button class="add-to-cart-btn" style="max-width:260px;">カートに追加</button>
+
+                    <div class="expert-box">
+                        <div class="expert-box-title">専門家コメント（婦人科医 ○○先生）</div>
+                        <p>
+                            「はじめての方は、からだが緊張しやすく、痛みが出やすい傾向があります。このアイテムは細めで柔らかく、
+                            先端も丸くなっているため、負担が少ない設計です。強い刺激よりも、‘心地よさ’を重視したい方に向いています。」
+                        </p>
+                    </div>
+
+                    <div class="rating-row">
+                        <span class="rating-pill">痛くなりにくさ：★★★★★</span>
+                        <span class="rating-pill">音の静かさ：★★★★★</span>
+                        <span class="rating-pill">保管のしやすさ：★★★★☆</span>
+                    </div>
+                    <div class="rating-tags">
+                        <span>・はじめての方</span>
+                        <span>・音が気になる環境</span>
+                        <span>・見た目がシンプルなものがいい</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-heading">商品説明</h2>
+                <div class="product-detail-text">
+                    <p>・細めのシルエットと柔らかいシリコン素材で、はじめての方でもからだにフィットしやすい形状です。</p>
+                    <p>・モーター音を抑えた静音設計で、夜間でも周囲を気にせず使いやすくなっています。</p>
+                    <p>・防水仕様のため、お風呂場での使用や丸洗いでのお手入れも可能です。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-heading">匿名レビュー（年齢・悩みタグ付き）</h2>
+                <div class="review-list">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-age">ニックネーム：ひみつさん / 20代後半</span>
+                            <span class="review-tags">悩みタグ：はじめてで痛みが不安</span>
+                        </div>
+                        <p style="font-size:0.9rem;color:var(--text-color);">
+                            はじめてなのでかなり不安でしたが、サイズが細めで、思っていたよりも全然痛くありませんでした。
+                            音もとても静かで、同居人に気づかれないかの心配がかなり減りました。
+                        </p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-age">ニックネーム：もやもやさん / 30代前半</span>
+                            <span class="review-tags">悩みタグ：音・保管場所</span>
+                        </div>
+                        <p style="font-size:0.9rem;color:var(--text-color);">
+                            以前使っていたものは音が大きくて怖かったのですが、これは本当に静かです。
+                            見た目もシンプルで、ポーチに入れても「それっぽく」見えないのがありがたいです。
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>shecare（シーケア）</h4>
+                    <p>女性の「知られたくない悩み」に寄り添う、デリケートなお悩み専門のメディアECです。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>リンク</h4>
+                    <ul>
+                        <li><a href="index.html#for-beginner">はじめての方へ</a></li>
+                        <li><a href="index.html#concerns">お悩み一覧</a></li>
+                        <li><a href="index.html#articles">読みもの一覧</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="#faq">よくある質問</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                        <li><a href="#shipping">配送について</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 shecare / 株式会社ハトリリ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
